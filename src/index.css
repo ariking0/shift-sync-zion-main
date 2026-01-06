@@ -1,0 +1,72 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 100% 99%;
+    --foreground: 250 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 250 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 250 10% 10%;
+
+    --primary: 255 70% 75%;
+    --primary-foreground: 255 10% 10%;
+
+    --secondary: 217 100% 70%;
+    --secondary-foreground: 250 10% 10%;
+
+    --muted: 250 10% 90%;
+    --muted-foreground: 250 10% 50%;
+
+    --accent: 25 100% 65%;
+    --accent-foreground: 250 10% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 250 10% 85%;
+    --input: 250 10% 85%;
+    --ring: 250 70% 75%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 255 70% 98%;
+    --sidebar-foreground: 250 10% 20%;
+    --sidebar-primary: 255 70% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 250 10% 95%;
+    --sidebar-accent-foreground: 250 10% 20%;
+    --sidebar-border: 250 10% 85%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .animate-hover {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/20;
+  }
+  
+  .button-hover {
+    @apply transition-all duration-200 active:scale-95;
+  }
+}
